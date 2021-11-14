@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PassCake</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aes-js/3.1.2/index.min.js" integrity="sha512-LOqfKFwH2W3jeb0NzXcImFlSyoL7hjsWbZvIeKNOaZw1gFw+yKTE/QUDGLit2KWdd57qd6IgMDkppK2tkwIEhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="/js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" id="logo">
+        <img src="/img/cupcake.png" alt="logo" />
+        <span>PassCake</span>
+      </a>
+    </header>
+
+    <main>
+      <section id="heading">
+        <h1>Encrypted Cloud Password Manager</h1>
+        <p>Share passwords with your colleagues quickly & securely!</p>
+      </section>
+
+      <form id="password-form">
+        <input name="login" type="text" placeholder="Login (username, email, etc)" />
+        <input name="password" type="password" placeholder="Password" />
+        <textarea placeholder="Additional notes (optional)..." name="notes"></textarea>
+        <label style="align-self: flex-start">
+          Expires in:
+          <select name="expiresIn">
+            <option value="900000">15 minutes</option>
+            <option value="3600000">1 hour</option>
+            <option value="86400000">24 hours</option>
+            <option value="604800000">7 days</option>
+          </select>
+        </label>
+
+        <button type="submit">Encrypt & generate link!</button>
+      </form>
+
+      <section class="info-section">
+        <h2>How it works</h2>
+        <p>
+          We generate a secret key and use AES-256-CTR encryption to encode your
+          password. The key, as well as your raw credentials, never leaves your
+          browser. We store only your encrypted password which can only be
+          unlocked when you provide a key.
+        </p>
+      </section>
+
+      <section class="info-section">
+        <h2>Source code</h2>
+        <p>
+          You can view the source code and contribute on GitHub:
+          <a href="https://github.com/antonlyap/passcake">antonlyap/passcake</a
+          >.
+        </p>
+      </section>
+
+      <section class="info-section">
+        <h2>Found the service useful?</h2>
+        <p style="text-align: center;">Consider tipping some Bitcoin: bc1q3x0qvcayap0x25rlypjgxmdgxqzena40pfw595</p>
+        <img src="/img/address.png" alt="Bitcoin address: bc1q3x0qvcayap0x25rlypjgxmdgxqzena40pfw595" style="width: 145px; display: block; margin: auto;">
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </div>
+      Photo by <a href="https://unsplash.com/@nasa">NASA</a> on
+      <a href="https://unsplash.com/photos/oyXis2kALVg">Unsplash</a>
+    </footer>
+  </body>
+</html>
